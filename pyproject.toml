@@ -15,8 +15,9 @@ hello-py = "hello_py.main:main"
 
 [dependency-groups]
 dev = [
-    "ruff>=0.15.11",
-    "ty>=0.0.31",
+    "pre-commit>=4.6.0",
+    "ruff>=0.15.12",
+    "ty==0.0.31",
 ]
 
 [tool.ruff]

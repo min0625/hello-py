@@ -19,9 +19,6 @@ uv run hello-py
 # Build the package
 make build
 
-# Format and auto-fix lint issues
-make fix
-
-# Check formatting, lint, and type errors
+# Check and fix all code issues
 make check
 ```
