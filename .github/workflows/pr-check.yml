@@ -23,4 +23,4 @@ jobs:
         run: uv sync --frozen
 
       - name: Run checks
-        run: make check
+        run: uv run pre-commit run --all-files

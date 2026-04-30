@@ -9,7 +9,7 @@
             "shellautocompletion": true
         }
     },
-    "postCreateCommand": "bash .devcontainer/postcreate.sh",
+    "postCreateCommand": "bash .devcontainer/post_create.sh",
     "customizations": {
         "vscode": {
             "extensions": [

@@ -1,0 +1,32 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-added-large-files
+      - id: mixed-line-ending
+      - id: detect-private-key
+      - id: check-merge-conflict
+      - id: check-symlinks
+      - id: check-case-conflict
+      - id: check-illegal-windows-names
+
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    rev: 0.11.7 # uv version.
+    hooks:
+      - id: uv-lock
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.12 # ruff version.
+    hooks:
+      - id: ruff-check
+        args: [ --fix ]
+      - id: ruff-format
+
+  - repo: local
+    hooks:
+      - id: ty-check
+        name: ty check
+        entry: uv run ty check --force-exclude
+        language: system
+        types_or: [python, pyi, jupyter]
+        require_serial: true
